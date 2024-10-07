@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller - Realidad Virtual</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="header-container"></div>
+
+    <main>
+        <section class="intro">
+            <br>
+            <h2>Descripción del Taller</h2>
+            <p style="font-weight: bold;">
+                    Taller ofrecido gracias a la irritante insistencia de un grupo de alumnos durante el verano del año 2024, a cargo del profesor Peter Montalvo, usando la plataforma de Unity y los equipos de realidad virtual Meta Quest 2 ofrecidos por la universidad en el laboratorio de tejidos
+            </p>
+        </section>
+
+        <section class="details">
+            <h2>Detalles del Evento</h2>
+            <ul>
+                <li>Lugar: Laboratorio de Tejidos - UPCH </li>
+                <li>Duración: 2 meses</li>
+                <li>Herramientas utilizadas: Meta Quest 2 - Unity</li>
+                <li>Equipo: Peter Montalvo - Noé Bazan - José Cueva - Junior Jara - Jhunior Herrera - Bruno Gavidia - Brigitte Bernal - Josué Florián</li>
+            </ul>
+        </section>
+
+        <section class="screenshots">
+            <h2>Capturas del Taller</h2>
+            <ul class="grid-list">
+                <li class="background-image" style="background-image: url('imagenes/taller/IMG_0206-1-1024x998.png');"></li>
+                <li class="background-image" style="background-image: url('imagenes/taller/434055776_822749036561706_6048198647080999953_n.jpg');"></li>
+                <li class="background-image" style="background-image: url('imagenes/taller/IMG_3095-compressed-1024x768.png');"></li>
+                <li class="background-image" style="background-image: url('imagenes/taller/IMG_3104-1-1024x768.png');"></li>
+            </ul>
+        </section>
+        
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+
+    <!-- Script para el menú del header -->
+    <script src="script.js"></script>
+    <script>
+        // Cargar el header dinámicamente
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+
+        // Cargar el footer dinámicamente
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+    </script>
+</body>
+</html>

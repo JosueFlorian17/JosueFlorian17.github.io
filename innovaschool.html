@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento - Feria de Universidades Innovaschool</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="header-container"></div>
+
+    <main>
+        <section class="intro">
+            <br>
+            <h2>Descripción del Evento</h2>
+            <p style="font-weight: bold;">
+                Ayuda en la presentación de la feria de universidades en el innovaschool de Comas, representando a la carrera de Ingeniería Informática en un taller que se presentó a los estudiantes del colegio
+            </p>
+        </section>
+
+        <section class="details">
+            <h2>Detalles del Evento</h2>
+            <ul>
+                <li>Lugar: Innova Schools Comas 2 - El Retablo </li>
+                <li>Duración: 6 horas</li>
+                <li>Herramientas utilizadas: Darwin - Imaginación</li>
+                <li>Equipo: Josué Florián - Edgar Jara</li>
+            </ul>
+        </section>
+
+        <section class="screenshots">
+            <h2>Video del evento</h2>
+            <div style="text-align: center; margin: 20px 0;">
+                <video controls width="500">
+                    <source src="\imagenes\video.mp4" type="video/mp4">
+                    Tu navegador no soporta el video.
+                </video>
+            </div>
+        </section>
+        
+        
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+
+    <!-- Script para el menú del header -->
+    <script src="script.js"></script>
+    <script>
+        // Cargar el header dinámicamente
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+
+        // Cargar el footer dinámicamente
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto - Ritmo VR</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="header-container"></div>
+
+    <main style="min-width: 40%; margin: 50px auto; padding: 0 20px;">
+        <section class="intro">
+            <br>
+            <h2>Descripción del Proyecto</h2>
+            <p style="font-weight: bold;">
+                Mi jefa no me dejó divulgarlo
+            </p>
+        </section>
+    
+        <section class="details">
+            <h2>Detalles del Proyecto</h2>
+            <ul>
+                <li>Mi jefa no me dejó divulgarlo</li>
+                <li>Mi jefa no me dejó divulgarlo</li>
+                <li>Mi jefa no me dejó divulgarlo</li>
+                <li>Mi jefa no me dejó divulgarlo</li>
+            </ul>
+        </section>
+    
+        <section class="screenshots">
+            <h2>Capturas del Proyecto</h2>
+            <ul class="grid-list">
+                <li class="background-image" style="background-image: url('screenshot1.png');"></li>
+                <li class="background-image" style="background-image: url('screenshot2.png');"></li>
+                <li class="background-image" style="background-image: url('screenshot3.png');"></li>
+                <li class="background-image" style="background-image: url('screenshot4.png');"></li>
+            </ul>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <div id="footer-container"></div>
+
+    <!-- Script para el menú del header -->
+    <script src="script.js"></script>
+    <script>
+        // Cargar el header dinámicamente
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+
+        // Cargar el footer dinámicamente
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+    </script>
+</body>
+</html>

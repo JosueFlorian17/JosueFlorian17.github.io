@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Florián</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="header-container"></div>
+
+    <main>
+        <section class="intro">
+            <br>
+            <p>Bienvenido a mi página personal, creada como parte de un proyecto para la clase de Sistemas de Información.</p>
+        </section>
+
+        <div class="about">
+            <h2>Sobre mí</h2>
+            <p>A continuación, se muestra un listado de apartados sobre mí:</p>
+            <ul>
+                <li><a href="yo.html" class="custom-link">Más sobre mi</a></li>
+                <li><a href="proyectos.html" class="custom-link">Proyectos</a></li>
+            </ul>
+        </div>
+    </main>
+
+    <!-- Footer dinámico -->
+    <div id="footer-container"></div>
+
+    <!-- Enlace al archivo JavaScript -->
+    <script src="script.js"></script>
+    <script>
+        // Cargar el header dinámicamente
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+
+        // Cargar el footer dinámicamente
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+    </script>
+</body>
+</html>

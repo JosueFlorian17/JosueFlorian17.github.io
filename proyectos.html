@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Florián</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="header-container"></div>
+    <main>
+        <section class="intro">
+            <br>
+            <p>Aquí podrás encontrar información de los proyectos, voluntariados y talleres de los que he sido parte</p>
+        </section>
+
+        <div class="about">
+            <h2>Sobre mí</h2>
+            <p>A continuación, se muestra un listado de actividades destacables:</p>
+            
+            <ul class="grid-list">
+                <li class="background-image" id="ritmo-vr">
+                    <a href="ritmo.html" class="custom-link" style="font-weight: bold;">
+                        
+                        RITMO VR
+                    </a>
+                </li>
+                <li class="background-image" id="voluntariado">
+                    <a href="innovaschool.html" class="custom-link" style="font-weight: bold;">
+                        
+                        VOLUNTARIADO EN INNOVASCHOOL
+                    </a>
+                </li>
+                <li class="background-image" id="taller-vr">
+                    <a href="taller-vr.html" class="custom-link" style="font-weight: bold;">
+                        
+                        TALLER DE REALIDAD VIRTUAL
+                    </a>
+                </li>
+                <li class="background-image" id="chocolatada">
+                    <a href="chocolatada.html" class="custom-link" style="font-weight: bold;">
+                        CHOCOLATADA 2023
+                    </a>
+                </li>
+            </ul>
+            
+        </div>
+        
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Florián. Todos los derechos reservados, a menos que me pregunten si la imagen de fondo es mía.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+    </script>
+    <script>
+        // Cargar el header dinámicamente
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+
+        // Cargar el footer dinámicamente
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
