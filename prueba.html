@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contenedores Lado a Lado</title>
+    <style>
+        /* Estilos para el contenedor principal */
+        .container {
+            display: flex; /* Aplica flexbox para alinear elementos en una fila */
+            gap: 10px; /* Espacio entre los contenedores */
+        }
+
+        /* Estilos para cada contenedor main */
+        main {
+            flex: 1; /* Permite que los contenedores ocupen el mismo ancho */
+            padding: 20px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <main>
+        <h2>Contenedor 1</h2>
+        <p>Contenido del primer contenedor.</p>
+    </main>
+
+    <main>
+        <h2>Contenedor 2</h2>
+        <p>Contenido del segundo contenedor.</p>
+    </main>
+</div>
+
+</body>
+</html>

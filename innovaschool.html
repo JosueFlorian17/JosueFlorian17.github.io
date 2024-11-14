@@ -6,41 +6,82 @@
     <title>Evento - Feria de Universidades Innovaschool</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Contenedor principal para organizar ambos <main> */
+        .main-wrapper {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            max-width: 100%;
+            padding: 20px;
+            flex-wrap: wrap; /* Permite que los elementos cambien de línea */
+        }
+
+        /* Contenedor de cada sección de contenido */
+        .content-wrapper {
+            max-width: 600px;
+            flex: 1;
+        }
+
+        /* Estilo para el contenedor del video */
+        .video-container {
+            flex-shrink: 0;
+            width: 50px;
+        }
+
+        /* Media query para pantallas pequeñas o en orientación vertical */
+        @media (max-width: 768px) {
+            .main-wrapper {
+                flex-direction: column; /* Cambia la dirección a columna */
+                align-items: center; /* Centra los elementos verticalmente */
+            }
+
+            .content-wrapper, .video-container {
+                max-width: 100%; /* Ocupa el ancho completo de la pantalla */
+                width: 100%; /* Ajusta el ancho al 100% */
+            }
+        }
+    </style>
 </head>
 <body>
     <div id="header-container"></div>
 
-    <main>
-        <section class="intro">
-            <br>
-            <h2>Descripción del Evento</h2>
-            <p style="font-weight: bold;">
-                Ayuda en la presentación de la feria de universidades en el innovaschool de Comas, representando a la carrera de Ingeniería Informática en un taller que se presentó a los estudiantes del colegio
-            </p>
-        </section>
+    <!-- Contenedor principal para los dos <main> -->
+    <div class="main-wrapper">
+        <!-- Primer <main> con el contenido de texto -->
+        <main class="content-wrapper">
+            <section class="intro">
+                <br>
+                <h2>Descripción del Evento</h2>
+                <p style="font-weight: bold;">
+                    Ayuda en la presentación de la feria de universidades en el innovaschool de Comas, representando a la carrera de Ingeniería Informática en un taller que se presentó a los estudiantes del colegio.
+                </p>
+            </section>
 
-        <section class="details">
-            <h2>Detalles del Evento</h2>
-            <ul>
-                <li>Lugar: Innova Schools Comas 2 - El Retablo </li>
-                <li>Duración: 6 horas</li>
-                <li>Herramientas utilizadas: Darwin - Imaginación</li>
-                <li>Equipo: Josué Florián - Edgar Jara</li>
-            </ul>
-        </section>
+            <section class="details">
+                <h2>Detalles del Evento</h2>
+                <ul>
+                    <li>Lugar: Innova Schools Comas 2 - El Retablo</li>
+                    <li>Duración: 6 horas</li>
+                    <li>Herramientas utilizadas: Darwin - Imaginación</li>
+                    <li>Equipo: Josué Florián - Edgar Jara</li>
+                </ul>
+            </section>
 
-        <section class="screenshots">
-            <h2>Video del evento</h2>
-            <div style="text-align: center; margin: 20px 0;">
-                <video controls width="500">
-                    <source src="\imagenes\video.mp4" type="video/mp4">
-                    Tu navegador no soporta el video.
-                </video>
-            </div>
-        </section>
-        
-        
-    </main>
+            <section class="text-container">
+                <h2>Video del evento</h2>
+                <p>Un vistazo al taller presentado en la feria de universidades, destacando la participación de estudiantes en el evento.</p>
+            </section>
+        </main>
+
+        <!-- Segundo <main> con el contenedor de video -->
+        <main class="video-container" style="width: 2%">
+            <video controls width="50%; margin-right: 2%">
+                <source src="/imagenes/video.mp4" type="video/mp4">
+                Tu navegador no soporta el video.
+            </video>
+        </main>
+    </div>
 
     <!-- Footer -->
     <div id="footer-container"></div>

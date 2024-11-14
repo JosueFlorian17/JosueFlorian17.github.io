@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca de Certificados</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header-container"></div>
+    <main style="display: flex; align-items: center; justify-content: center; min-height: 100vh; background-color: rgba(112, 20, 20, 0);box-shadow: 0px 0px 0px red;; width: 100%; padding: 0 0px;">
+        
+        <section class="library-container"> 
+            <div class="certificate" onclick="showDetails('Certificado en Desarrollo Web', 'Certificado que valida habilidades en HTML, CSS y JavaScript para crear sitios web.', 'imagenes/desarrollo-web.png')">
+                <h3>Desarrollo Web</h3>
+            </div>
+            <div class="certificate" onclick="showDetails('Certificado en Python', 'Certificación en programación avanzada con Python, incluyendo automatización y análisis de datos.', 'imagenes/python.png')">
+                <h3>Python</h3>
+            </div>
+            <div class="certificate" onclick="showDetails('Certificado en Data Science', 'Certificado en ciencia de datos con habilidades en análisis, visualización y machine learning.', 'imagenes/data-science.png')">
+                <h3>Data Science</h3>
+            </div>
+            <div class="certificate" onclick="showDetails('Certificado en Marketing Digital', 'Certificado en estrategias de marketing digital y redes sociales.', 'imagenes/marketing-digital.png')">
+                <h3>Marketing Digital</h3>
+            </div>
+        </section>
+    
+        <!-- Ventana emergente de detalles -->
+        <div class="details-overlay" id="detailsOverlay">
+            <div class="details-content">
+                <h2 id="detailsTitle">Título del Certificado</h2>
+                <img id="detailsImage" src="" alt="Imagen del certificado" style="width: 100%; height: auto; border-radius: 8px; margin: 15px 0;">
+                <p id="detailsDescription">Descripción del certificado seleccionado.</p>
+                <button class="close-btn" onclick="closeDetails()">Cerrar</button>
+            </div>
+        </div>
+    </main>
+    
+    <div id="footer-container"></div>
+
+    <script src="script.js"></script>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+
+    </script>
+</body>
+</html>

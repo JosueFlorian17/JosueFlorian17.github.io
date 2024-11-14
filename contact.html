@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Florián</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="header-container"></div>
+    <br>
+    <main>
+        <br>
+        Contáctame por Instagram! 
+<a href="https://www.instagram.com/florianjosue.jpg/" target="_blank">
+    <img src="\imagenes\ig.png" alt="Instagram" class="social-icon">
+</a><br>
+Sé mi amigo en facebook!
+<a href="https://www.facebook.com/josue.florian.1422" target="_blank">
+    <img src="\imagenes\facebook.png" alt="Facebook" class="social-icon">
+</a><br>
+Sígueme en Twitter!
+<a href="https://x.com/Osheny1" target="_blank">
+    <img src="\imagenes\twitter.png" alt="Twitter" class="social-icon">
+</a><br>
+Contáctamene en LinkedIn!
+<a href="https://www.linkedin.com/in/josué-florián-b2029a27a/" target="_blank">
+    <img src="\imagenes\linkedin.png" alt="LinkedIn" class="social-icon">
+</a><br>
+
+Envíame un correo!
+<a href="mailto:josue.florian@upch.pe" target="_blank">
+    <img src="\imagenes\mail.png" alt="Gmail" class="social-icon" style="width: 12%;">
+</a>
+    </main>
+    <script src="script.js"></script>
+    <script>
+        // Cargar el header dinámicamente
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+
+        // Cargar el footer dinámicamente
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+    </script>

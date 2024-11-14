@@ -9,9 +9,10 @@ body {
     background-image: url("background.png");
     background-size: cover;
     background-position: center;
-    min-height: 100vh; /* Para asegurar que el footer se coloque bien */
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;  
 }
 
 header {
@@ -19,9 +20,7 @@ header {
     color: white;
     padding: 8px;
     text-align: right;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 5px solid #047b71;
+    border-bottom: 5px  lid #047b71;
 }
 
 .header-content {
@@ -36,10 +35,10 @@ h1 {
 }
 
 .circular-imagen {
-    width: 4%;   /* Fijamos el tamaño del contenedor de la imagen como un porcentaje */
-    height: 4%;  /* Fijamos el tamaño del contenedor de la imagen como un porcentaje */
-    min-width: 50px;  /* Tamaño mínimo de la imagen en ancho */
-    min-height: 50px; /* Tamaño mínimo de la imagen en alto */
+    width: 4%;
+    height: 4%;
+    min-width: 50px;
+    min-height: 50px;
     border-radius: 50%;
     overflow: hidden;
     border: 3px solid darkcyan;
@@ -48,25 +47,38 @@ h1 {
 }
 
 .circular-imagen img {
-    width: 100%; /* Tamaño general para otros botones */
-    height: 100%; /* Tamaño general para otros botones */
-    object-fit: cover; /* Mantiene la imagen ajustada sin distorsión */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .return-button {
-    width: 3%;   /* Fijamos el ancho del botón de regreso al 2% */
-    height: 3%;  /* Fijamos la altura del botón de regreso al 2% */
-    min-width: 30px;  /* Tamaño mínimo del botón */
-    min-height: 30px; /* Tamaño mínimo del botón */
-    display: flex;  /* Para centrar el contenido */
-    align-items: center; /* Centra verticalmente */
-    justify-content: center; /* Centra horizontalmente */
+    width: 3%;
+    height: 3%;
+    min-width: 30px;
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .return-button img {
-    width: 100%; /* Ajusta la imagen al contenedor */
-    height: 100%; /* Ajusta la imagen al contenedor */
-    object-fit: cover; /* Mantiene la imagen ajustada sin distorsión */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.social-links a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+}
+
+.social-icon {
+    width: 24px; /* Tamaño más pequeño */
+    height: 24px; /* Tamaño más pequeño */
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
 }
 
 
@@ -77,7 +89,7 @@ main {
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    flex-grow: 1; /* Para que el contenido del main ocupe el espacio disponible */
+    flex-grow: 1;
 }
 
 h2 {
@@ -85,18 +97,17 @@ h2 {
     color: darkcyan;
 }
 
-p {
+p, ul li {
     font-size: 1.1rem;
     line-height: 1.6;
 }
 
 ul {
     list-style: none;
-    padding: 0;
+    padding: 20px;
 }
 
 ul li {
-    font-size: 1.2rem;
     background-color: darkcyan;
     color: white;
     padding: 10px;
@@ -109,69 +120,66 @@ footer {
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
-    margin-top: auto; /* Para pegar el footer al fondo de la página */
+    margin-top: auto;
     width: 100%;
-    box-sizing: border-box; /* Asegura que el padding no rompa el layout */
+    box-sizing: border-box;
 }
 
 .custom-link:hover {
-    cursor: pointer; /* Cambia el cursor al pasar sobre el texto */
+    cursor: pointer;
 }
 
 .custom-link {
-    color: inherit; /* Mantiene el color del texto original */
-    text-decoration: none; /* Elimina el subrayado */
+    color: inherit;
+    text-decoration: none;
 }
 
 .grid-list {
     display: grid;
-    grid-template-columns: repeat(2, 2fr); /* Hace una cuadrícula ajustable */
-    gap: 10px; /* Espacio entre los elementos */
-    list-style-type: none; /* Quita los puntos de la lista */
+    grid-template-columns: repeat(2, 2fr);
+    gap: 10px;
+    list-style-type: none;
     padding: 10px;
 }
 
 .grid-list li {
-    background-color: darkcyan; /* Color de fondo para cada ítem */
+    background-color: darkcyan;
     padding: 30%;
     text-align: center;
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .grid-list a {
     text-decoration: none;
-    color: inherit; /* Mantiene el color del texto */
+    color: inherit;
     font-weight: 400;
 }
 
 .grid-list a:hover {
-    color: #000000; /* Cambia el color al pasar el mouse por encima */
+    color: #000000;
 }
 
-
 @media (max-width: 600px) {
-    h1{
-        font-size: 2.5vw; /* Ajuste adicional para móviles */
+    h1 {
+        font-size: 2.5vw;
     }
 }
 
-/* Para pantallas más grandes */
 @media (min-width: 1200px) {
-
     h1 {
-        font-size: 1.5vw; /* Ajuste para pantallas más grandes */
+        font-size: 1.5vw;
     }
 }
 
 .background-image {
     position: relative;
     overflow: hidden;
-    background-size: cover; /* Ajusta el tamaño de la imagen */
-    background-position: center; /* Centra la imagen */
-    height: 150px; /* Ajusta la altura según tus necesidades */
-    color: white; /* Color del texto para mayor contraste */
-    padding: 10px; /* Espaciado dentro del <li> */
+    background-size: cover;
+    background-position: center;
+    height: 150px;
+    color: white;
+    padding: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -182,89 +190,173 @@ footer {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.3); /* Color negro con opacidad para oscurecer */
-    z-index: 1; /* Coloca la capa encima de la imagen */
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
 }
 
 .background-image a {
-    position: relative; /* Para asegurar que el enlace esté encima de la capa oscura */
-    z-index: 2; /* Coloca el texto encima de la capa oscura */
-    display: block; /* Hace que toda el área del li sea clickeable */
+    position: relative;
+    z-index: 2;
+    display: block;
     text-decoration: none;
     color: inherit;
 }
 
 .background-image:hover {
-    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el mouse */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra al pasar el mouse */
-}
-
-/* Estilo para RITMO VR */
-#ritmo-vr {
-    background-image: url('ritmo.png'); /* Cambia a la ruta de tu imagen */
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 
-/* Estilo para VOLUNTARIADO EN INNOVASCHOOL */
-#voluntariado {
-    background-image: url('darwin.png'); /* Cambia a la ruta de tu imagen */
+.library-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    width: 90%;
+    max-width: 1000px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
 }
 
-/* Estilo para TALLER DE REALIDAD VIRTUAL */
-#taller-vr {
-    background-image: url('VR.png'); /* Cambia a la ruta de tu imagen */
-}
-
-/* Estilo para CHOCOLATADA 2023 */
-#chocolatada {
-    background-image: url('chocolatada.png'); /* Cambia a la ruta de tu imagen */
-}
-
-
-/* Estilos para el footer */
-.contact-section {
+.certificate {
+    background-color: darkcyan;
+    padding: 20px;
+    border-radius: 8px;
     text-align: center;
-    margin-top: 20px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
 }
 
-/* Íconos de redes sociales */
-.social-links {
-    display: flex;
+.certificate:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.certificate h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+/* Details Overlay for Certificate */
+.details-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
     justify-content: center;
-    gap: 10px; /* Espacio entre los íconos */
+    align-items: center;
+    animation: fadeIn 0.5s ease;
+    z-index: 1000;
 }
 
-.social-icon {
-    width: 32px;
-    height: 32px;
-    transition: transform 0.3s ease;
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
-.social-icon:hover {
-    transform: scale(1.2);
+.details-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    animation: slideUp 0.4s ease;
 }
 
-/* Posición fija en pantallas grandes */
-@media (min-width: 768px) {
-    .contact-section {
-        position: fixed;
-        bottom: 10px;
-        right: 10px;
-    }
-
-    .social-links {
-        justify-content: flex-end;
-    }
+@keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
 
-/* Posicionamiento normal (no fijo) en pantallas pequeñas o en vistas verticales largas */
-@media (max-width: 767px) {
-    .contact-section {
-        position: relative;
-        margin-bottom: 20px;
-    }
+.details-content h2 {
+    margin-top: 0;
+    color: #333;
+}
 
-    .social-links {
-        justify-content: center; /* Centra los íconos en pantallas pequeñas */
-    }
+.details-content p {
+    color: #666;
+}
+
+.close-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: darkcyan;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.close-btn:hover {
+    background-color: #555;
+}
+
+
+
+.testimonials-section {
+    padding: 40px 20px;
+    background-color: rgba(245, 245, 245, 0.9);
+    text-align: center;
+}
+
+.testimonials-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.testimonial {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-style: italic;
+}
+
+.testimonial span {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: darkcyan;
+}
+
+
+.motivational-section {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.photo-and-quote {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+}
+
+.personal-photo {
+    border-radius: 1%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    height: auto;
+}
+
+.motivational-quote {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #555;
+    font-style: italic;
+    max-width: 400px;
 }
